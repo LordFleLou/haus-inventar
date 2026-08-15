@@ -83,6 +83,8 @@ function renderShelfItem(artikel) {
 }
 
 function renderAllItems() {
+    const searchTerm = document.getElementById("search-input")?.value.trim().toLowerCase() || "";
+
     ["oberes-regal", "unteres-regal", "einkaufsliste"].forEach((id) => {
         const container = document.getElementById(id + "-inhalt");
         if (container) {
@@ -91,6 +93,11 @@ function renderAllItems() {
     });
 
     vorrat.forEach((artikel) => {
+        const matchesSearch = artikel.name.toLowerCase().includes(searchTerm);
+        if (!matchesSearch) {
+            return;
+        }
+
         if (artikel.menge <= 0) {
             renderShoppingListItem(artikel);
             return;
@@ -101,6 +108,8 @@ function renderAllItems() {
 }
 
 renderAllItems();
+
+document.getElementById("search-input").addEventListener("input", renderAllItems);
 
 document.getElementById("item-form").addEventListener("submit", (e) => {
     e.preventDefault();
