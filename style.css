@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+}
+
+#einkaufsliste-inhalt,
+#oberes-regal-inhalt,
+#unteres-regal-inhalt {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.item-row p {
+    margin: 0;
+    min-width: 180px;
+}
+
+button {
+    padding: 0.25rem 0.6rem;
+}

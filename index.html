@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vorratsschrank</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type = "image/png" href = "favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>Vorratsschrank</h1>
+        </header>
+
+        <nav>
+            <a href="#einkaufsliste">Einkaufsliste</a>
+            <a href="#oberes-regal">Oberes Regal</a>
+            <a href="#unteres-regal">Unteres Regal</a>
+        </nav>
+
+        <section id="add-item">
+            <h2>Neues Item hinzufügen</h2>
+            <form id="item-form">
+                <input type="text" id="item-name" placeholder="Itemname" required>
+                <input type="number" id="item-menge" placeholder="Menge" value="1" min="0" required>
+                <select id="item-regal" required>
+                    <option value="">Regal wählen</option>
+                    <option value="oberes-regal">Oberes Regal</option>
+                    <option value="unteres-regal">Unteres Regal</option>
+                </select>
+                <button type="submit">Hinzufügen</button>
+            </form>
+        </section>
+
+        <h2 id="einkaufsliste">Einkaufsliste</h2>
+        <div id="einkaufsliste-inhalt"></div>
+
+        <h2 id="oberes-regal">Oberes Regal</h2>
+        <div id="oberes-regal-inhalt"></div>
+
+        <h2 id="unteres-regal">Unteres Regal</h2>
+        <div id="unteres-regal-inhalt"></div>
+
+        <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
